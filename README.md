@@ -138,7 +138,7 @@ Matrislerde sürekli *y = mx + b*  işlemi çalışacağı için çok�
 
 elde ettiğimiz veriyi belli bir değer arasına koymamız lazım bunun için aktivasyon
 
-fonksiyonu kullanıyoruz. Verilerimizi 0 ile 1 arasına koyuyoruz.
+fonksiyonu kullanıyoruz böylece verilerimizi 0 ile 1 arasına koyuyoruz.
 
 ### Sigmoid Fonksiyonu
 
