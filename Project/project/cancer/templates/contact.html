@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="zxx">
+  <head>
+    <!-- Required meta tags -->
+    {% load static %}
+
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <title>İletişim</title>
+    <link rel="icon" href="{% static 'img/banner_img.png' %}" />
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" />
+    <!-- animate CSS -->
+    <link rel="stylesheet" href="{% static 'css/animate.css' %}" />
+    <!-- owl carousel CSS -->
+    <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}" />
+    <!-- font awesome CSS -->
+    <link rel="stylesheet" href="{% static 'css/all.css' %}" />
+    <!-- flaticon CSS -->
+    <link rel="stylesheet" href="{% static 'css/flaticon.css' %}" />
+    <link rel="stylesheet" href="{% static 'css/themify-icons.css' %}" />
+    <!-- font awesome CSS -->
+    <link rel="stylesheet" href="{% static 'css/magnific-popup.css' %}" />
+    <!-- swiper CSS -->
+    <link rel="stylesheet" href="{% static 'css/slick.css' %}" />
+    <!-- style CSS -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}" />
+  </head>
+
+  <body>
+    <!--::header part start::-->
+    <header class="main_menu singe_page_menu">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-12">
+            <nav class="navbar navbar-expand-lg navbar-light">
+              <a class="navbar-brand single_page_logo" href="/">
+                <img src="{% static 'img/footer_logo.png' %}" alt="logo" />
+              </a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent"
+                aria-expanded="false"
+                aria-label="Toggle navigation"
+              >
+                <span class="menu_icon"></span>
+              </button>
+
+              <div
+                class="collapse navbar-collapse main-menu-item"
+                id="navbarSupportedContent"
+              >
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="/">Ana Sayfa</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/features/">Özellikler</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/price/">Fiyatlar</a>
+                  </li>
+
+                  <li class="nav-item">
+                    <a class="nav-link" href="/contact/">İletişim</a>
+                  </li>
+                </ul>
+              </div>
+              <a href="#" class="d-none d-sm-block btn_1 home_page_btn"
+                >Üye Ol</a
+              >
+            </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!--::Header part end::-->
+    <!-- breadcrumb start-->
+    <section class="breadcrumb breadcrumb_bg">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="breadcrumb_iner text-center">
+              <div class="breadcrumb_iner_item">
+                <h2>Bize Ulaşın</h2>
+                <h5>Yapay Zeka<span></span>İletişim</h5>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- breadcrumb start-->
+
+    <!-- ================ contact section start ================= -->
+    <section class="contact-section section_padding">
+      <div class="container">
+        <div class="d-none d-sm-block mb-5 pb-4">
+          <div id="map" style="height: 480px;"></div>
+          <script>
+            function initMap() {
+              var uluru = {
+                lat: -25.363,
+                lng: 131.044
+              };
+              var grayStyles = [
+                {
+                  featureType: 'all',
+                  stylers: [
+                    {
+                      saturation: -90
+                    },
+                    {
+                      lightness: 50
+                    }
+                  ]
+                },
+                {
+                  elementType: 'labels.text.fill',
+                  stylers: [
+                    {
+                      color: '#ccdee9'
+                    }
+                  ]
+                }
+              ];
+              var map = new google.maps.Map(document.getElementById('map'), {
+                center: {
+                  lat: 38.389845,
+                  lng: 27.164597
+                },
+                zoom: 13,
+                styles: grayStyles,
+                scrollwheel: false
+              });
+            }
+          </script>
+          <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpfS1oRGreGSBU5HHjMmQ3o5NLw7VdJ6I&callback=initMap"></script>
+        </div>
+
+        <div class="row">
+          <div class="col-12">
+            <h2 class="contact-title">İletişim Kur</h2>
+          </div>
+          <div class="col-lg-8">
+            <form
+              class="form-contact contact_form"
+              action="contact_process.php"
+              method="post"
+              id="contactForm"
+              novalidate="novalidate"
+            >
+              <div class="row">
+                <div class="col-12">
+                  <div class="form-group">
+                    <textarea
+                      class="form-control w-100"
+                      name="message"
+                      id="message"
+                      cols="30"
+                      rows="9"
+                      onfocus="this.placeholder = ''"
+                      onblur="this.placeholder = 'Mesajınızı Girin'"
+                      placeholder="Mesajınızı Girin"
+                    ></textarea>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <input
+                      class="form-control"
+                      name="name"
+                      id="name"
+                      type="text"
+                      onfocus="this.placeholder = ''"
+                      onblur="this.placeholder = 'Adınızı Girin'"
+                      placeholder="Adınızı Girin"
+                    />
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="form-group">
+                    <input
+                      class="form-control"
+                      name="email"
+                      id="email"
+                      type="email"
+                      onfocus="this.placeholder = ''"
+                      onblur="this.placeholder = 'E-posta Adresinizi Girin'"
+                      placeholder="E-posta Adresinizi Girin"
+                    />
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="form-group">
+                    <input
+                      class="form-control"
+                      name="subject"
+                      id="subject"
+                      type="text"
+                      onfocus="this.placeholder = ''"
+                      onblur="this.placeholder = 'Konuyu Girin'"
+                      placeholder="Konuyu Girin"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <button type="submit" class="button button-contactForm btn_1">
+                  Mesajı İlet <i class="flaticon-right-arrow"></i>
+                </button>
+              </div>
+            </form>
+          </div>
+          <div class="col-lg-4">
+            <div class="media contact-info">
+              <span class="contact-info__icon"><i class="ti-home"></i></span>
+              <div class="media-body">
+                <h3>Buca/İzmir</h3>
+                <p>İzmir Meslek Yüksekokulu</p>
+              </div>
+            </div>
+            <div class="media contact-info">
+              <span class="contact-info__icon"><i class="ti-tablet"></i></span>
+              <div class="media-body">
+                <h3>0542 630 3904</h3>
+                <p>Yiğit Çakmak</p>
+              </div>
+            </div>
+            <div class="media contact-info">
+              <span class="contact-info__icon"><i class="ti-tablet"></i></span>
+              <div class="media-body">
+                <h3>0552 528 2027</h3>
+                <p>Mehmet Burhan Şimşek</p>
+              </div>
+            </div>
+            <div class="media contact-info">
+              <span class="contact-info__icon"><i class="ti-email"></i></span>
+              <div class="media-body">
+                <h3>support@yapayzeka.com</h3>
+                <p>Bize İstediğiniz Zaman Ulaşabilirsiniz</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ================ contact section end ================= -->
+
+    <!--::footer_part start::-->
+    <footer class="footer_part">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-8 col-md-4 col-lg-4">
+            <div class="single_footer_part">
+              <a href="index.html" class="footer_logo_iner">
+                <img
+                  src="{% static 'img/banner_img.png' %}"
+                  width="200px"
+                  alt="#"
+                />
+              </a>
+              <p>
+                Yapabilirler çünkü yapabileceklerini düşünüyorlar.<br />
+                -Virgil
+              </p>
+            </div>
+          </div>
+          <div class="col-sm-4 col-md-4 col-lg-2">
+            <div class="single_footer_part">
+              <h4>Hakkımızda</h4>
+              <ul class="list-unstyled">
+                <li><a href="">Web Sitesi</a></li>
+                <li><a href="">Pazarlama Hizmeti</a></li>
+                <li><a href="">Müşteri servisi</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-4 col-md-4 col-lg-2">
+            <div class="single_footer_part">
+              <h4>Hızlı Linkler</h4>
+              <ul class="list-unstyled">
+                <li><a href="">Marka Varlıkları</a></li>
+                <li><a href="">Yatırımcı ilişkileri</a></li>
+                <li><a href="">Kullanım Şartları</a></li>
+                <li><a href="">Gizlilik Politikası</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-4 col-md-4 col-lg-2">
+            <div class="single_footer_part">
+              <h4>Hesabım</h4>
+              <ul class="list-unstyled">
+                <li><a href="">Basın</a></li>
+                <li><a href="">Medya</a></li>
+                <li><a href="">Yatırımcı ilişkileri</a></li>
+                <li><a href="">Kullanım Şartları</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="col-sm-4 col-md-3 col-lg-2">
+            <div class="single_footer_part">
+              <h4>Kaynaklar</h4>
+              <ul class="list-unstyled">
+                <li><a href="">Uygulama Güvenliği</a></li>
+                <li><a href="">Yazılım Politikası</a></li>
+                <li><a href="">Tedarik Zinciri</a></li>
+                <li><a href="">Ajanslar</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <hr />
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="copyright_text">
+              <p>
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                Copyright &copy;
+                <script>
+                  document.write(new Date().getFullYear());
+                </script>
+                All rights reserved |
+                <i class="ti-heart" aria-hidden="true"></i> by
+                <a href="https://yigitcakmak.com" target="_blank">IMYO</a>
+
+                <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="footer_icon social_icon">
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#" class="single_social_icon"
+                    ><i class="fab fa-facebook-f"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#" class="single_social_icon"
+                    ><i class="fab fa-twitter"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#" class="single_social_icon"
+                    ><i class="fas fa-globe"></i
+                  ></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!--::footer_part end::-->
+
+    <!-- jquery plugins here-->
+    <script src="{% static 'js/jquery-1.12.1.min.js' %}"></script>
+    <!-- popper js -->
+    <script src="{% static 'js/popper.min.js' %}"></script>
+    <!-- bootstrap js -->
+    <script src="{% static 'js/bootstrap.min.js' %}"></script>
+    <!-- easing js -->
+    <script src="{% static 'js/jquery.magnific-popup.js' %}"></script>
+    <!-- swiper js -->
+    <script src="{% static 'js/swiper.min.js' %}"></script>
+    <!-- swiper js -->
+    <script src="{% static 'js/masonry.pkgd.js' %}"></script>
+    <!-- particles js -->
+    <script src="{% static 'js/owl.carousel.min.js' %}"></script>
+    <script src="{% static 'js/jquery.nice-select.min.js' %}"></script>
+    <!-- slick js -->
+    <script src="{% static 'js/slick.min.js' %}"></script>
+    <script src="{% static 'js/jquery.counterup.min.js' %}"></script>
+    <script src="{% static 'js/waypoints.min.js' %}"></script>
+    <script src="{% static 'js/contact.js' %}"></script>
+    <script src="{% static 'js/jquery.ajaxchimp.min.js' %}"></script>
+    <script src="{% static 'js/jquery.form.js' %}"></script>
+    <script src="{% static 'js/jquery.validate.min.js' %}"></script>
+    <script src="{% static 'js/mail-script.js' %}"></script>
+    <!-- custom js -->
+    <script src="{% static 'js/custom.js' %}"></script>
+  </body>
+</html>
